@@ -1,0 +1,19 @@
+# Editor files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Backup files
+*.backup
+*.bak
+
+# Development
+node_modules/
+.env
+
+# OS
+Thumbs.db
