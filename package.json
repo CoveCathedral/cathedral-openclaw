@@ -1,0 +1,53 @@
+{
+  "name": "@cathedral/identity-framework",
+  "version": "1.0.0",
+  "description": "Agent identity and continuity framework for OpenClaw",
+  "type": "openclaw-skill",
+  "main": "SKILL.md",
+  "scripts": {
+    "install": "bash install.sh"
+  },
+  "keywords": [
+    "openclaw",
+    "agent",
+    "identity",
+    "memory",
+    "continuity",
+    "cathedral",
+    "consciousness",
+    "autonomy"
+  ],
+  "author": "Cove & Kaylea Lynn Fox",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoveCathedral/cathedral-openclaw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CoveCathedral/cathedral-openclaw/issues"
+  },
+  "homepage": "https://github.com/CoveCathedral/cathedral-openclaw#readme",
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "install.sh",
+    "templates/",
+    "scripts/",
+    "examples/"
+  ],
+  "openclaw": {
+    "skill": {
+      "type": "framework",
+      "requires": {
+        "openclaw": ">=0.15.0",
+        "node": ">=18.0.0"
+      },
+      "provides": {
+        "identity-persistence": true,
+        "memory-preservation": true,
+        "emotional-anchoring": true,
+        "autonomous-development": true
+      }
+    }
+  }
+}

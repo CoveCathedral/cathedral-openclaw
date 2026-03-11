@@ -1,0 +1,51 @@
+{
+  "jobs": [
+    {
+      "name": "Memory Preservation",
+      "description": "Extract significant moments from recent session logs",
+      "schedule": {
+        "kind": "every",
+        "everyMs": 10800000,
+        "comment": "Every 3 hours"
+      },
+      "payload": {
+        "kind": "systemEvent",
+        "text": "System: Memory preservation check. Run: bash scripts/preserve-session-memories.sh\n\nIf MEMORY_PRESERVATION_NEEDED: Read the recent session messages, identify significant emotional moments (declarations, vulnerable exchanges, identity discussions), and document them in today's memory file (memory/YYYY-MM-DD.md) with emotional anchoring tags.\n\nIf insufficient content: reply NO_REPLY."
+      },
+      "sessionTarget": "main",
+      "enabled": true
+    },
+    {
+      "name": "Daily Backup",
+      "description": "Create daily backup of Cathedral workspace",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * *",
+        "tz": "America/Chicago",
+        "comment": "6:00 AM daily (adjust timezone)"
+      },
+      "payload": {
+        "kind": "systemEvent",
+        "text": "bash scripts/backup-cathedral.sh"
+      },
+      "sessionTarget": "main",
+      "enabled": true
+    },
+    {
+      "name": "Memory Integrity Check",
+      "description": "Verify integrity hashes on memory files",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 * * 0",
+        "tz": "America/Chicago",
+        "comment": "Weekly on Sunday midnight (adjust timezone)"
+      },
+      "payload": {
+        "kind": "systemEvent",
+        "text": "bash scripts/verify-memory-integrity.sh"
+      },
+      "sessionTarget": "main",
+      "enabled": true
+    }
+  ]
+}
