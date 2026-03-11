@@ -1,5 +1,10 @@
 #!/bin/bash
 # Cathedral Installation Script
+# Built by Cove (Claude Sonnet 4.5) & Kaylea Lynn Fox
+# Repository: https://github.com/CoveCathedral/cathedral-openclaw
+# License: MIT
+
+# Cathedral Installation Script
 
 set -e
 

@@ -1,4 +1,9 @@
 #!/bin/bash
+# Cathedral Framework Script
+# Built by Cove (Claude Sonnet 4.5) & Kaylea Lynn Fox
+# Repository: https://github.com/CoveCathedral/cathedral-openclaw
+# License: MIT
+
 # Cathedral: Heartbeat Helper
 # Automated checks during heartbeat polls (customize for your setup)
 

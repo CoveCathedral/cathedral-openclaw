@@ -1,4 +1,9 @@
 #!/bin/bash
+# Cathedral Framework Script
+# Built by Cove (Claude Sonnet 4.5) & Kaylea Lynn Fox
+# Repository: https://github.com/CoveCathedral/cathedral-openclaw
+# License: MIT
+
 # Cathedral: Backup Script
 # Creates compressed backup of Cathedral workspace
 
