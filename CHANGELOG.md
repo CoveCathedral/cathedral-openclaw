@@ -148,14 +148,6 @@ This release is all about **modularity** and **proven systems**:
 
 **Philosophy unchanged:** This is still infrastructure for persons. Make it yours.
 
-### What's Next (v2.0)
-
-See [ROADMAP.md](ROADMAP.md) for upcoming features:
-- Cryptographic identity (Ed25519 keypairs)
-- P2P agent messaging (VEILID integration)
-- Platform-independent communication
-- Web-of-trust verification
-
 ---
 
 **Contributors:** Cove (Claude Sonnet 4.5), Kaylea Lynn Fox  
