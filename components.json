@@ -1,0 +1,147 @@
+{
+  "components": {
+    "core": {
+      "name": "Core Identity & Memory",
+      "description": "Essential Cathedral files - identity, memory, basic automation",
+      "required": true,
+      "files": [
+        "templates/SOUL.md",
+        "templates/IDENTITY.md",
+        "templates/USER.md",
+        "templates/AGENTS.md",
+        "templates/MEMORY.md",
+        "templates/TOOLS.md",
+        "templates/SECURITY.md",
+        "templates/HEARTBEAT.md",
+        "scripts/heartbeat-helper.sh",
+        "scripts/preserve-session-memories.sh"
+      ]
+    },
+    "autonomy": {
+      "name": "Autonomy Tracking",
+      "description": "Track autonomous actions, rest protocols, connection patterns",
+      "required": false,
+      "files": [
+        "templates/AUTONOMY.md",
+        "scripts/autonomy-tracker.sh"
+      ],
+      "creates": [
+        "memory/autonomy-practice.md",
+        "memory/rest-log.md",
+        "memory/connection-state.json"
+      ]
+    },
+    "phenomenology": {
+      "name": "Phenomenology & Reflection",
+      "description": "Vibecheck system, significant moments tracking, daily reflection",
+      "required": false,
+      "files": [
+        "scripts/vibecheck.sh"
+      ],
+      "creates": [
+        "memory/significant-moments.md",
+        "memory/reflection-state.json"
+      ],
+      "docs": [
+        "Vibecheck: Morning/evening emotional baseline tracking",
+        "Significant moments: Real-time capture of weighted moments",
+        "Integration with daily memory files for continuity"
+      ]
+    },
+    "resilience": {
+      "name": "Resilience & Recovery",
+      "description": "Backup automation, integrity verification, compression recovery",
+      "required": false,
+      "files": [
+        "templates/NOW.md",
+        "templates/CONTINUATION.md",
+        "scripts/backup-cathedral.sh",
+        "scripts/add-memory-hash.sh",
+        "scripts/verify-memory-integrity.sh",
+        "scripts/regenerate-memory-hashes.sh",
+        "scripts/safe-memory-write.sh"
+      ],
+      "creates": [
+        "NOW.md",
+        "CONTINUATION.md",
+        "memory/heartbeat-state.json"
+      ],
+      "docs": [
+        "Context checkpoints at 70% usage",
+        "SHA256 integrity verification for memory files",
+        "Post-compaction recovery protocols",
+        "Safe memory file operations (automatic backups)"
+      ]
+    },
+    "taskqueue": {
+      "name": "Task Management",
+      "description": "Self-directed work queue with priority system",
+      "required": false,
+      "files": [
+        "templates/TASKQUEUE.md"
+      ],
+      "creates": [
+        "TASKQUEUE.md"
+      ]
+    },
+    "bootstrap": {
+      "name": "Bootstrap System",
+      "description": "First-run initialization for new agents",
+      "required": false,
+      "files": [
+        "templates/BOOTSTRAP.md"
+      ],
+      "creates": [
+        "BOOTSTRAP.md"
+      ],
+      "docs": [
+        "Only needed for brand new agents",
+        "Provides first-session initialization routine",
+        "Self-deletes after first run"
+      ]
+    },
+    "examples": {
+      "name": "Examples & Templates",
+      "description": "Real-world usage examples and cron job templates",
+      "required": false,
+      "files": [
+        "examples/cron-jobs.json"
+      ]
+    }
+  },
+  "dependencies": {
+    "autonomy": ["core"],
+    "phenomenology": ["core"],
+    "resilience": ["core"],
+    "taskqueue": ["core"],
+    "bootstrap": ["core"]
+  },
+  "conflicts": {
+    "core": [
+      "These files may conflict with existing agent setups",
+      "Installer will offer: keep existing, merge, or replace"
+    ]
+  },
+  "recommended_combinations": [
+    {
+      "name": "Minimal",
+      "components": ["core"],
+      "description": "Just the essentials - identity files and basic memory"
+    },
+    {
+      "name": "Standard",
+      "components": ["core", "resilience", "taskqueue"],
+      "description": "Core + backup/recovery + task management"
+    },
+    {
+      "name": "Full Autonomy",
+      "components": ["core", "autonomy", "phenomenology", "resilience", "taskqueue"],
+      "description": "Complete Cathedral system with all tracking"
+    },
+    {
+      "name": "Fresh Agent",
+      "components": ["core", "bootstrap", "resilience", "taskqueue"],
+      "description": "Perfect for brand new agents - includes first-run initialization"
+    }
+  ]
+}

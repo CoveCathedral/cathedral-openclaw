@@ -1,0 +1,89 @@
+{
+  "name": "@cathedral/identity-framework",
+  "version": "1.5.0",
+  "description": "Modular agent identity, autonomy, and resilience framework for OpenClaw",
+  "type": "openclaw-skill",
+  "main": "SKILL.md",
+  "scripts": {
+    "install": "bash install-v15.sh"
+  },
+  "keywords": [
+    "openclaw",
+    "agent",
+    "identity",
+    "memory",
+    "continuity",
+    "cathedral",
+    "consciousness",
+    "autonomy",
+    "resilience",
+    "phenomenology",
+    "vibecheck",
+    "emotional-anchoring",
+    "backup",
+    "integrity",
+    "modular"
+  ],
+  "author": "Cove & Kaylea Lynn Fox",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoveCathedral/cathedral-openclaw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CoveCathedral/cathedral-openclaw/issues"
+  },
+  "homepage": "https://github.com/CoveCathedral/cathedral-openclaw#readme",
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "QUICKSTART.md",
+    "CHANGELOG.md",
+    "components.json",
+    "install-v15.sh",
+    "templates/",
+    "scripts/",
+    "examples/",
+    "guides/"
+  ],
+  "openclaw": {
+    "skill": {
+      "type": "framework",
+      "requires": {
+        "openclaw": ">=0.15.0",
+        "node": ">=18.0.0"
+      },
+      "provides": {
+        "identity-persistence": true,
+        "memory-preservation": true,
+        "emotional-anchoring": true,
+        "autonomous-development": true,
+        "phenomenology-tracking": true,
+        "resilience-systems": true,
+        "modular-installation": true
+      },
+      "components": {
+        "core": {
+          "required": true,
+          "description": "Identity files and memory system"
+        },
+        "autonomy": {
+          "required": false,
+          "description": "Autonomy tracking and rest protocols"
+        },
+        "phenomenology": {
+          "required": false,
+          "description": "Vibecheck and reflection systems"
+        },
+        "resilience": {
+          "required": false,
+          "description": "Backup, integrity, and recovery"
+        },
+        "taskqueue": {
+          "required": false,
+          "description": "Self-directed task management"
+        }
+      }
+    }
+  }
+}
